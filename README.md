@@ -1,16 +1,16 @@
-## Descrição
+## Description
 
 This is a simple implementation of microservices in Laravel.
 
-## Rodar a aplicação
+## Run the application
 
-#### Crie os containers com Docker
+#### Create containers with docker
 
 ```bash
 $ docker-compose up
 ```
 
-#### Accesse no browser
+#### Url
 
 ```
 http://localhost:8000
