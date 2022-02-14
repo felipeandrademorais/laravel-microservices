@@ -24,7 +24,9 @@ class GenresController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, $this->rules);
-        return Genres::create($request->all());
+        $category = Genres::create($request->all());
+        $category->refresh();
+        return $category;
     }
 
     public function show(Genres $genre)
@@ -42,6 +44,6 @@ class GenresController extends Controller
     public function destroy(Genres $genre)
     {
         $genre->delete();
-        return response()->noContent(); //204
+        return response()->noContent();
     }
 }
